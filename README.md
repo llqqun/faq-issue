@@ -11,3 +11,13 @@
 
 nuxt.config.js build属性下设置loadingScreen: false可以关掉sse，client似乎关闭不了。去掉之后这个阻塞现象没有出现
 
+## nuxt2 开发环境下debugger触发时sourceMap文件不对
+
+> 现象  
+
+浏览器正常进入debugger模式,控制台显示的sourceMap代码文件不一致  
+文件夹目录 pages > aBc > index.vue  
+
+> 解决  
+
+检查文件目录发现是因为驼峰命名导致的,将文件夹名称修改成非驼峰的就行  
